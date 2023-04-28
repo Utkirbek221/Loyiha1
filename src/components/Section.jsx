@@ -6,8 +6,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
+import bgImg from "../img/bgimg.svg";
+import SS from "./SS";
 
 export default function Section() {
+  const [activeButton, setActiveButton] = useState(0);
+  const handleClick = (index) => {
+    setActiveButton(index);
+  };
+
   const { products, room } = useGlobalContext();
   const [setSwiperRef] = useState(null);
   const SlideRef = useRef();
@@ -20,6 +27,11 @@ export default function Section() {
   const slideRef = useRef();
   const next = () => {
     slideRef.current.swiper.slideNext();
+  };
+  const style = {
+    button:
+      "flex gap-[10px] justify-center items-center rounded-[4px] text-[#ffff] w-[168px] h-[56px]",
+    text: "text-[60px] font-semibold  pt-[16px]  pb-[1px]",
   };
 
   return (
@@ -151,8 +163,11 @@ export default function Section() {
           <h1 className="text-[60px] font-semibold pt-[129px] text-[white]">
             Our lates projects
           </h1>
-          <div  className="absolute right-[4%] bottom-[33%] w-[90px] h-[90px] border-[#0F3141] z-[9999]  border-[8px] bg-[#F07454] rounded-[50%] flex items-center justify-center">
-            <i onClick={next}  className="fa-solid fa-arrow-right text-[44px] text-[#ffff]"></i>
+          <div className="cursor-pointer absolute right-[4%] bottom-[33%] w-[90px] h-[90px] border-[#0F3141] z-[9999]  border-[8px] bg-[#F07454] rounded-[50%] flex items-center justify-center">
+            <i
+              onClick={next}
+              className="fa-solid fa-arrow-right text-[44px] text-[#ffff]"
+            ></i>
           </div>
           <div className="flex overflow-hidden mt-[100px]">
             <Swiper
@@ -171,13 +186,16 @@ export default function Section() {
               {room.length ? (
                 room.map((lates) => (
                   <SwiperSlide>
-                    <div key={lates.id}>
+                    <div
+                      key={lates.id}
+                      className="cursor-pointer hover:text-red-500"
+                    >
                       <img
                         className="h-[520px] min-w-[420px] rounded-[30px] mr-[40px]"
                         src={lates.img}
                         alt=""
                       />
-                      <h1 className="text-[white] text-[24px] font-semibold mt-[24px] mb-[16px]">
+                      <h1 className="text-white cursor-pointer text-[24px] font-semibold mt-[24px] mb-[16px] hover:text-red-500">
                         {lates.name}
                       </h1>
                       <p className="text-[#B6B9BF] text-[18px] font-semibold">
@@ -191,6 +209,71 @@ export default function Section() {
               )}
             </Swiper>
           </div>
+        </div>
+      </div>
+      <div
+        className="w-full h-[743px] bg-cover bg-no-repeat bg-center"
+        style={{ backgroundImage: `url(${bgImg})` }}
+      >
+        <div className="container">
+          <h4 className="text-[#F17252] pt-[141px] text-[20px] font-semibold ">
+            Newcomer product
+          </h4>
+          <h1
+            onClick={() => handleClick(0)}
+            className={
+              activeButton === 0
+                ? `text-[#355655] ${style.text}`
+                : activeButton === 1
+                ? `text-[#F26947] ${style.text}`
+                : activeButton === 2
+                ? `text-[#CA8152] ${style.text}`
+                : activeButton === 3
+                ? `text-[#EBC5AD] ${style.text}`
+                : activeButton === 4
+                ? `text-[#292928] ${style.text}`
+                : ""
+            }
+          >
+            2 seater Sofa
+          </h1>
+          <p className="text-[18px] font-normal opacity-50 w-[645px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+            luctus malesuada et volutpat, pellentesque dignissim suscipit.{" "}
+          </p>
+          <p className="text-[18px] font-medium pt-[32] pb-[16px]">
+            Avaliable Colors
+          </p>
+          <div className="flex pb-[72px]">
+            <SS activeButton={activeButton} handleClick={handleClick} />
+          </div>
+          <button
+            onClick={() => handleClick(0)}
+            className={
+              activeButton === 0
+                ? `bg-[#355655] ${style.button}`
+                : activeButton === 1
+                ? `bg-[#F26947] ${style.button}`
+                : activeButton === 2
+                ? `bg-[#CA8152] ${style.button}`
+                : activeButton === 3
+                ? `bg-[#EBC5AD] ${style.button}`
+                : activeButton === 4
+                ? `bg-[#292928] ${style.button}`
+                : ""
+            }
+          >
+            Shop Now
+            <div className="w-[32px] h-[32px] rounded-[50%] bg-low-red flex justify-center items-center ">
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div className="w-full h-[970px] ">
+        <div className="container">
+          <h1>What our clients say</h1>
+          
         </div>
       </div>
     </section>

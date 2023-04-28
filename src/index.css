@@ -34,3 +34,11 @@
   object-fit: cover;
 
 }
+.active:before {
+  content: "\2713"; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
