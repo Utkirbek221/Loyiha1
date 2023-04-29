@@ -39,7 +39,7 @@ export default function Header() {
           <button className="bg-[#F16F4F] text-[#FFFFFF] w-[242px] h-[56px] flex justify-center items-center mt-[45px] gap-3">
             <p>Check our projects</p>
             <div className="w-[32px] h-[32px] rounded-[50%] bg-low-red flex justify-center items-center ">
-              <i class="fa-solid fa-chevron-right"></i>
+              <i className="fa-solid fa-chevron-right"></i>
             </div>
           </button>
         </div>

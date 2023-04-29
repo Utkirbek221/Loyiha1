@@ -8,6 +8,11 @@ import livingroom from "./img/livingroom.svg";
 import Kitchen from "./img/Kitchen.svg";
 import bedroom from "./img/bedroom.svg";
 import bathroom from "./img/bathroom.jpg";
+import avatar from "./img/avatar.svg"
+import avatar2 from "./img/avatar2.svg"
+import qoshim from "./img/“.svg"
+
+
 
 const AppContext = React.createContext();
 
@@ -146,8 +151,44 @@ const AppProvider = ({ children }) => {
     },
   ];
 
+  const info = [
+    {
+      id: 1,
+      img: avatar,
+      img2: qoshim,
+      name: "As expected, 10 years experience on furniture business will not disappointing at all",
+      category: "As they said, their 10 years of experience in furniture and interior business is real. They work it professionally and friendly at the same time and of course the results is beyond my expectations.",
+      text:"Roy Rakabuming"
+    },
+    {
+      id: 2,
+      img: avatar2,
+      img2: qoshim,
+      name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vel odio tortor amet sagittis sed. ",
+      category: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie est, dictum pellentesque turpis. Facilisis id cras amet tortor. Porttitor nascetur eget sit eget massa consectetur. Fringilla viverra sit magna.",
+      text:"Dafit Bekam"
+    },
+    {
+      id: 1,
+      img: avatar,
+      img2: qoshim,
+      name: "As expected, 10 years experience on furniture business will not disappointing at all",
+      category: "As they said, their 10 years of experience in furniture and interior business is real. They work it professionally and friendly at the same time and of course the results is beyond my expectations.",
+      text:"Roy Rakabuming"
+    },
+    {
+      id: 2,
+      img: avatar2,
+      img2: qoshim,
+      name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vel odio tortor amet sagittis sed. ",
+      category: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie est, dictum pellentesque turpis. Facilisis id cras amet tortor. Porttitor nascetur eget sit eget massa consectetur. Fringilla viverra sit magna.",
+      text:"Dafit Bekam"
+    },
+    
+  ];
+
   return (
-    <AppContext.Provider value={{ products, room }}>{children}</AppContext.Provider>
+    <AppContext.Provider value={{ products, room,info }}>{children}</AppContext.Provider>
   );
 };
 
