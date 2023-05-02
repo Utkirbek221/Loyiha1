@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../img/Logo2.svg";
+import logo from "../components/img/Logo2.svg";
 import { SlLocationPin } from "react-icons/sl";
 import { FiMail } from "react-icons/fi";
 import { AiOutlineInstagram } from "react-icons/ai";
@@ -55,7 +55,7 @@ export default function Footer() {
           <div className="flex text-[22px] gap-[23px]">
             <AiOutlineInstagram className="text-[26px] mt-[-3px]"/>
             <BsFacebook/>
-            <i class="fa-brands fa-linkedin-in"></i>
+            <i className="fa-brands fa-linkedin-in"></i>
             <AiOutlineTwitter className="text-[26px] mt-[-3px]"/>
           </div>
         </div>

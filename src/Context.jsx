@@ -1,18 +1,16 @@
-import React, { useContext } from "react";
-import stul from "./img/Stul.svg";
-import tabu from "./img/tabu.svg";
-import usimlik from "./img/usimlik.svg";
-import lampa from "./img/lampa.svg";
-import tortma from "./img/tortma.svg";
-import livingroom from "./img/livingroom.svg";
-import Kitchen from "./img/Kitchen.svg";
-import bedroom from "./img/bedroom.svg";
-import bathroom from "./img/bathroom.jpg";
-import avatar from "./img/avatar.svg"
-import avatar2 from "./img/avatar2.svg"
-import qoshim from "./img/“.svg"
-
-
+import React, { useContext, useState } from "react";
+import stul from "./components/img/Stul.svg";
+import tabu from "./components/img/tabu.svg";
+import usimlik from "./components/img/usimlik.svg";
+import lampa from "./components/img/lampa.svg";
+import tortma from "./components/img/tortma.svg";
+import livingroom from "./components/img/livingroom.svg";
+import Kitchen from "./components/img/Kitchen.svg";
+import bedroom from "./components/img/bedroom.svg";
+import bathroom from "./components/img/bathroom.jpg";
+import avatar from "./components/img/avatar.svg";
+import avatar2 from "./components/img/avatar2.svg";
+import qoshim from "./components/img/“.svg";
 
 const AppContext = React.createContext();
 
@@ -99,7 +97,10 @@ const AppProvider = ({ children }) => {
       price: "$ 23,58",
     },
   ];
-
+  const [open, setOpen] = useState(false);
+  const click = () => {
+    setOpen(!open);
+  };
   const room = [
     {
       id: 1,
@@ -157,38 +158,55 @@ const AppProvider = ({ children }) => {
       img: avatar,
       img2: qoshim,
       name: "As expected, 10 years experience on furniture business will not disappointing at all",
-      category: "As they said, their 10 years of experience in furniture and interior business is real. They work it professionally and friendly at the same time and of course the results is beyond my expectations.",
-      text:"Roy Rakabuming"
+      category:
+        "As they said, their 10 years of experience in furniture and interior business is real. They work it professionally and friendly at the same time and of course the results is beyond my expectations.",
+      text: "Roy Rakabuming",
     },
     {
       id: 2,
       img: avatar2,
       img2: qoshim,
       name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vel odio tortor amet sagittis sed. ",
-      category: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie est, dictum pellentesque turpis. Facilisis id cras amet tortor. Porttitor nascetur eget sit eget massa consectetur. Fringilla viverra sit magna.",
-      text:"Dafit Bekam"
+      category:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie est, dictum pellentesque turpis. Facilisis id cras amet tortor. Porttitor nascetur eget sit eget massa consectetur. Fringilla viverra sit magna.",
+      text: "Dafit Bekam",
     },
     {
       id: 1,
       img: avatar,
       img2: qoshim,
       name: "As expected, 10 years experience on furniture business will not disappointing at all",
-      category: "As they said, their 10 years of experience in furniture and interior business is real. They work it professionally and friendly at the same time and of course the results is beyond my expectations.",
-      text:"Roy Rakabuming"
+      category:
+        "As they said, their 10 years of experience in furniture and interior business is real. They work it professionally and friendly at the same time and of course the results is beyond my expectations.",
+      text: "Roy Rakabuming",
     },
     {
       id: 2,
       img: avatar2,
       img2: qoshim,
       name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vel odio tortor amet sagittis sed. ",
-      category: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie est, dictum pellentesque turpis. Facilisis id cras amet tortor. Porttitor nascetur eget sit eget massa consectetur. Fringilla viverra sit magna.",
-      text:"Dafit Bekam"
+      category:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie est, dictum pellentesque turpis. Facilisis id cras amet tortor. Porttitor nascetur eget sit eget massa consectetur. Fringilla viverra sit magna.",
+      text: "Dafit Bekam",
     },
-    
   ];
 
+  const [activeButton, setActiveButton] = useState(0);
+  const handleClick = (index) => {
+    setActiveButton(index);
+  };
+  const style = {
+    button:
+      "flex gap-[10px] justify-center items-center rounded-[4px] text-[#ffff] w-[168px] h-[56px]",
+    text: "text-[60px] font-semibold  pt-[16px]  pb-[1px]",
+  };
+
   return (
-    <AppContext.Provider value={{ products, room,info }}>{children}</AppContext.Provider>
+    <AppContext.Provider
+      value={{ products, room, info, style, handleClick, activeButton, click, open}}
+    >
+      {children}
+    </AppContext.Provider>
   );
 };
 

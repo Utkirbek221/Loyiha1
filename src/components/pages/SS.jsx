@@ -1,6 +1,8 @@
 import React from "react";
+import { useGlobalContext } from "../../Context";
 
-export default function SS({ activeButton, handleClick }) {
+export default function SS() {
+  const {activeButton, handleClick} = useGlobalContext()
   return (
     <div className="flex items-center gap-[10px]">
       <button
