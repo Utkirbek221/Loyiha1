@@ -10,11 +10,11 @@ export default function Section() {
   return (
     <section className="w-full ">
       {/* <Provide /> */}
-      <BestSeller />
-      {/* <OurLatest />
-      <Newcomer />
-      <ClientsSay/>
-      <PayDetails/> */}
+      {/* <BestSeller /> */}
+      {/* <OurLatest /> */}
+      {/* <Newcomer /> */}
+      {/* <ClientsSay/> */}
+      <PayDetails/>
     </section>
   );
 }

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/grid";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import { useGlobalContext } from "../../Context";
@@ -20,7 +21,7 @@ export default function BestSellex() {
   <>
     <div className="w-full h-[796px]  flex justify-center items-center ml:w-[375px] ml:h-[1269px]">
       <div className="container w-[1440px] h-[796px] ml:w-[375px] ml:h-[1269px]">
-        <div className="flex justify-between items-center mt-[160px] ">
+        <div className="flex justify-between items-center mt-[160px] ml:mt-[80px]">
           <h1 className="text-[60px] font-semibold ml:text-[40px]">Best seller products</h1>
           <div className="text-[44px] ml:flex ml:gap-[16px] ml:pt-[60px]">
             <i
@@ -34,20 +35,33 @@ export default function BestSellex() {
           <Swiper
             onSwiper={setSwiperRef}
             ref={SlideRef}
-            slidesPerView={5.2}
             centeredSlides={false}
-            spaceBetween={30}
+            // grid={{
+            //   rows: 2,
+            // }}
+            breakpoints={{
+              0:{
+                slidesPerView: 2,
+                spaceBetween: 15,
+              },
+              375:{
+                slidesPerView: 5.2,
+                spaceBetween: 30,
+              },
+
+            }}
             pagination={{
               type: "fraction",
+              clickable: true,
             }}
             navigation={false}
             modules={[Navigation]}
-            className="mySwiper"
+            className="mySwiper bg-black ml:w-[500px] ml:flex ml:flex-wrap"
           >
             {products.length ? (
               products.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <div key={idx} className="ml:block">
+                  <div key={idx}>
                     <img
                       className="min-w-[250px] h-[250px] ml:min-w-[150px] ml:h-[210px] rounded-[8px] mr-[24px]"
                       src={item.img}
@@ -71,6 +85,8 @@ export default function BestSellex() {
             ) : (
               <></>
             )}
+            
+            
           </Swiper>
         </div>
       </div>

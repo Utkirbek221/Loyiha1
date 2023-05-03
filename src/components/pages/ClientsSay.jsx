@@ -18,11 +18,11 @@ export default function ClientsSay() {
     };
   return (
     <>
-      <div className="w-full h-[970px] ">
+      <div className="w-full h-[970px] ml:w-[375xp] ml:h-[955px]">
         <div className="container">
-          <div className="flex justify-between items-center mt-[160px] mb-[67px]">
-            <h1 className="text-[60px] font-semibold">What our clients say</h1>
-            <div className="text-[44px]">
+          <div className="flex justify-between items-center mt-[160px] mb-[67px] ml:mt-[80px] ml:mb-[40px] ">
+            <h1 className="text-[60px] font-semibold ml:text-[40px]">What our clients say</h1>
+            <div className="text-[44px] ml:text-[24px] ml:flex ml:pt-[60px]">
               <i
                 onClick={HandlePrev}
                 className="fa-solid fa-arrow-left mr-[16px] "
@@ -33,9 +33,18 @@ export default function ClientsSay() {
           <Swiper
             onSwiper={setSwiperRef}
             ref={Slideref}
-            slidesPerView={1.61}
             centeredSlides={false}
-            spaceBetween={30}
+            breakpoints={{
+              0:{
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              375:{
+                slidesPerView: 1.6,
+                spaceBetween: 30,
+              },
+
+            }}
             pagination={{
               type: "fraction",
             }}
@@ -47,25 +56,25 @@ export default function ClientsSay() {
               info.map((infoo, idx) => (
                 <SwiperSlide key={idx}>
                   <div className=" flex gap-[48px]">
-                    <div className="flex justify-center items-center w-[838px] h-[493px] bg-[#FAF8F4] rounded-[16px]">
+                    <div className="flex justify-center items-center w-[838px] h-[493px] bg-[#FAF8F4] rounded-[16px] ml:w-[347px] ml:h-[678px] ml:flex-col">
                       <img
-                        className="w-[286px] h-[397px] mr-[48px] ml-[48px]"
+                        className="w-[286px] h-[397px] mr-[48px] ml-[48px] ml:w-[144px] ml:h-[200px]"
                         src={infoo.img}
                         alt=""
                       />
-                      <div className="h-[382px]">
+                      <div className="h-[382px] ml:pt-[17px]">
                         <img
                           className="w-[32px] h-[32px]"
                           src={infoo.img2}
                           alt="w-[457px]"
                         />
-                        <h1 className="w-[415px] h-[108px] text-[24px] font-semibold text-[#0F3141] mt-[16px] mb-[24px]">
+                        <h1 className="w-[415px] h-[108px] text-[24px] font-semibold text-[#0F3141] mt-[16px] mb-[24px] ml:w-[290px] ml:mb-[16px] ml:text-[18px]">
                           {infoo.name}
                         </h1>
-                        <p className="w-[405px] h-[108px] text-[#78756E] text-[18px] font-normal">
+                        <p className="w-[405px] h-[108px] text-[#78756E] text-[18px] font-normal ml:text-[15px] ml:w-[270px]">
                           {infoo.category}
                         </p>
-                        <p className="pt-[65px] text-[18px] font-semibold text-[#565554]">
+                        <p className="pt-[65px] text-[18px] font-semibold text-[#565554] ml:pt-[83px]">
                           {infoo.text}
                         </p>
                       </div>
