@@ -5,29 +5,40 @@ import { FiMail } from "react-icons/fi";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import { AiOutlineTwitter } from "react-icons/ai";
-
+import { TfiFacebook } from "react-icons/tfi";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F3141] w-full h-[612px] m-auto text-[#fff]">
+    <footer className="bg-[#0F3141] w-full h-[612px] m-auto text-[#fff] ml:w-[375px] ml:h-[501px]">
       <div className="container">
         <div className="flex pt-[64px]">
           <div className="">
             <img src={logo} alt="" />
-            <p className="pt-[39.5px] pb-[50.5px]">Better Furniture, Better Living</p>
-            <div className="flex">
-              <i><SlLocationPin /></i>
-              <p className="pl-[19px] pr-[60px]">Address</p>
-              <p>7319 Wagon Lane
-                Bradenton, FL 34203</p>
+            <p className="pt-[39.5px] pb-[50.5px]">
+              Better Furniture, Better Living
+            </p>
+            <div className="flex ml:flex-col ">
+              <i>
+                <SlLocationPin />
+              </i>
+              <p className="pl-[19px] pr-[60px] ml:mt-[-20px] ml:mb-[5px] ml:ml-[19px]">
+                Address
+              </p>
+              <p className="ml:text-[14px]">
+                7319 Wagon Lane Bradenton, FL 34203
+              </p>
             </div>
-            <div className="flex pb-[38px] pt-[21px]">
-              <i><FiMail /></i>
-              <p className="pl-[19px] pr-[60px]">Contact Us</p>
-              <p>hellosansbrothers@gmail.com</p>
+            <div className="flex pb-[38px] pt-[21px] ml:flex-col ">
+              <i>
+                <FiMail />
+              </i>
+              <p className="pl-[19px] pr-[60px]  ml:mt-[-20px] ml:mb-[5px] ml:ml-[19px]">
+                Contact Us
+              </p>
+              <p className="ml:text-[14px]">hellosansbrothers@gmail.com</p>
             </div>
           </div>
-          <div className="flex pl-[160px] gap-[175px]">
+          <div className="flex pl-[160px] gap-[175px] ml:hidden">
             <ul>
               <li className="text-[20px] font-semibold">Website</li>
               <li className="pt-[24px] pb-[16px]">home</li>
@@ -44,8 +55,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="w-full h-[1px] bg-black bg-[#265267]"></div>
-        <div className="flex justify-between pt-[28.5px]">
+        <div className="w-full h-[1px] bg-[#265267] ml:w-0 ml:h-0"></div>
+        <div className="flex justify-between pt-[28.5px] ml:hidden">
           <p>© Sans Brothers</p>
           <ul className="flex gap-[24px] text-[#75919E]">
             <li>Privacy and Terms</li>
@@ -53,12 +64,26 @@ export default function Footer() {
             <li>Languanges</li>
           </ul>
           <div className="flex text-[22px] gap-[23px]">
-            <AiOutlineInstagram className="text-[26px] mt-[-3px]"/>
-            <BsFacebook/>
+            <AiOutlineInstagram className="text-[26px] mt-[-3px]" />
+            <BsFacebook />
             <i className="fa-brands fa-linkedin-in"></i>
-            <AiOutlineTwitter className="text-[26px] mt-[-3px]"/>
+            <AiOutlineTwitter className="text-[26px] mt-[-3px]" />
           </div>
         </div>
+        <div className="hidden ml:flex">
+          <div className="ml:flex ml:gap-[55px]">
+            <p className="ml:text-[16px] ml:text-[#878787]">
+              Terms & Conditions
+            </p>
+            <p className="ml:text-[16px] ml:text-[#878787]">Privacy Policy</p>
+          </div>
+          
+        </div>
+        <div className="hidden ml:flex ml:pt-[36px] ml:gap-[40px] pl-[100px]">
+            <TfiFacebook className="text-[20px]" />
+            <AiOutlineTwitter className="text-[26px] mt-[-3px]" />
+            <AiOutlineInstagram className="text-[26px] mt-[-3px]" />
+          </div>
       </div>
     </footer>
   );

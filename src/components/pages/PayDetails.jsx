@@ -33,7 +33,7 @@ export default function PayDetails() {
           <div className="relative w-full h-full  mt-[-608px]  ml:mt-[41px]">
             <img className="absolute  right-[0px] ml:left-[47%] ml:w-[168px] ml:h-[297px]" src={burchak} alt="" />
             <img
-              className="absolute right-[12%] top-[350px] ml:w-[285px] ml:h-[185px] "
+              className="absolute right-[12%] top-[350px] ml:w-[265px] ml:h-[165px] ml:top-[130px] ml:right-[70px]"
               src={burchak2}
               alt=""
             />

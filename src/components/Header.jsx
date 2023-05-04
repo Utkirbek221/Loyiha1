@@ -1,5 +1,4 @@
 import React from "react";
-import img from "./img/img.png";
 import logo from "./img/Logo.svg";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useGlobalContext } from "../Context";
@@ -17,7 +16,7 @@ export default function Header() {
               <div className="flex items-center ">
                 <img src={logo} alt="" className="object-cover ml:pl-[10px]" />
                 {open && (
-                  <ul className="ml:flex-col ml:block  ml:fixed flex  ml:top-[2%] ml:left-[63%]">
+                  <ul className="ml:flex-col ml:block flex  ml:top-[2%] ml:left-[63%]">
                     <li className="pl-[65px] ml:pl-[32px]">
                       <b>About</b>
                     </li>

@@ -19,8 +19,8 @@ export default function BestSellex() {
   };
   return(
   <>
-    <div className="w-full h-[796px]  flex justify-center items-center ml:w-[375px] ml:h-[1269px]">
-      <div className="container w-[1440px] h-[796px] ml:w-[375px] ml:h-[1269px]">
+    <div className="w-full h-[796px]  flex justify-center items-center ml:w-[375px] ml:h-[1769px] ml:mt-[-250px]">
+      <div className="container  h-[796px] ml:w-[375px] ml:h-[1269px]">
         <div className="flex justify-between items-center mt-[160px] ml:mt-[80px]">
           <h1 className="text-[60px] font-semibold ml:text-[40px]">Best seller products</h1>
           <div className="text-[44px] ml:flex ml:gap-[16px] ml:pt-[60px]">
@@ -31,14 +31,14 @@ export default function BestSellex() {
             <i onClick={handleNext} className="fa-solid fa-arrow-right ml:text-[24px]"></i>
           </div>
         </div>
-        <div className="flex pt-[72px] overflow-hidden ml:pt-[49px]">
+        <div className="flex pt-[72px] overflow-hidden ml:pt-[49px] ml:mr-[-550px]">
           <Swiper
             onSwiper={setSwiperRef}
             ref={SlideRef}
             centeredSlides={false}
-            // grid={{
-            //   rows: 2,
-            // }}
+            grid={{
+              rows: 2,
+            }}
             breakpoints={{
               0:{
                 slidesPerView: 2,
@@ -56,7 +56,7 @@ export default function BestSellex() {
             }}
             navigation={false}
             modules={[Navigation]}
-            className="mySwiper bg-black ml:w-[500px] ml:flex ml:flex-wrap"
+            className="mySwiper ml:w-[500px] ml:flex ml:flex-wrap"
           >
             {products.length ? (
               products.map((item, idx) => (

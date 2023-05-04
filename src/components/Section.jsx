@@ -9,11 +9,11 @@ import PayDetails from "./pages/PayDetails";
 export default function Section() {
   return (
     <section className="w-full ">
-      {/* <Provide /> */}
-      {/* <BestSeller /> */}
-      {/* <OurLatest /> */}
-      {/* <Newcomer /> */}
-      {/* <ClientsSay/> */}
+      <Provide />
+      <BestSeller />
+      <OurLatest />
+      <Newcomer />
+      <ClientsSay/>
       <PayDetails/>
     </section>
   );

@@ -20,24 +20,24 @@ export default function OurLatest() {
           <h1 className="text-[60px] font-semibold pt-[129px] text-[white] ml:pt-[45px] ml:text-[40px]">
             Our lates projects
           </h1>
-          <div className="cursor-pointer absolute right-[4%] bottom-[33%] w-[90px] h-[90px] border-[#0F3141] z-[9999]  border-[8px] bg-[#F07454] rounded-[50%] flex items-center justify-center">
+          <div className="ml:hidden cursor-pointer absolute right-[4%] bottom-[33%] w-[90px] h-[90px] border-[#0F3141] z-[9999]  border-[8px] bg-[#F07454] rounded-[50%] flex items-center justify-center">
             <i
               onClick={next}
               className="fa-solid fa-arrow-right text-[44px] text-[#ffff]"
             ></i>
           </div>
-          <div className="flex overflow-hidden mt-[100px] ml:mt-[49px]">
+          <div className="flex overflow-hidden mt-[100px] ml:mt-[49px] ml:mr-[-180px]">
             <Swiper
               onSwiper={setSwiperRef}
               ref={slideRef}
               centeredSlides={false}
-              // grid={{
-            //   rows: 2,
-            // }}
+              grid={{
+              rows: 2,
+            }}
               breakpoints={{
                 0:{
-                  slidesPerView: 2.1,
-                  spaceBetween: 15,
+                  slidesPerView: 3,
+                  spaceBetween: 20,
                 },
                 375:{
                   slidesPerView: 3.1,
@@ -50,7 +50,7 @@ export default function OurLatest() {
               }}
               navigation={false}
               modules={[Navigation]}
-              className="mySwiper"
+              className="mySwiper  "
             >
               {room.length ? (
                 room.map((lates, idx) => (
