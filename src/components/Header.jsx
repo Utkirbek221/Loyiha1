@@ -1,14 +1,12 @@
 import React from "react";
 import logo from "./img/Logo.svg";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useGlobalContext } from "../Context";
 
 export default function Header() {
   const { click, open } = useGlobalContext();
   return (
-    <header
-      className=""
-    >
+    <header className="">
       <div className="m-auto">
         <div className="shadov">
           <div className="container">
@@ -16,22 +14,33 @@ export default function Header() {
               <div className="flex items-center ">
                 <img src={logo} alt="" className="object-cover ml:pl-[10px]" />
                 {open && (
-                  <ul className="ml:flex-col ml:block flex  ml:top-[2%] ml:left-[63%]">
+                 <div className=""><h1>sad</h1>
+                   <ul className="ml:flex-col ml:block flex  ml:top-[2%] ml:left-[63%]">
                     <li className="pl-[65px] ml:pl-[32px]">
                       <b>About</b>
                     </li>
                     <li className="pl-[32px]">Blog</li>
                     <li className="pl-[32px]">Contact</li>
                   </ul>
+                  
+                 </div>
+                  
                 )}
               </div>
               <button className="w-[126px] h-[56px] bg-[#F16F4F] rounded-[80px] text-[#FFFFFF] ml:hidden">
                 Sign In
               </button>
-              <AiOutlineMenu
-                onClick={click}
-                className="hidden ml:block text-[24px]"
-              />
+              {open ? (
+                <AiOutlineClose
+                  onClick={click}
+                  className="hidden ml:block text-[24px]"
+                />
+              ) : (
+                <AiOutlineMenu
+                  onClick={click}
+                  className="hidden ml:block text-[24px]"
+                />
+              )}
             </div>
           </div>
         </div>
