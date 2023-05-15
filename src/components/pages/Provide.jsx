@@ -4,7 +4,8 @@ import home from "../img/home.svg";
 export default function Provide() {
   return (
     <>
-      <div className="w-full h-[676px]  flex justify-center items-center bg-[#FAF8F4] ml:w-[375px] ml:h-[1221px] ">
+      <div className="w-full h-[676px]  flex justify-center items-center bg-[#FAF8F4] ml:w-[375px] ml:h-[1221px] 
+      ma:w-[375px] ma:h-[1221px] mr:w-[375px] mr:h-[1221px] mt:w-[375px] mt:h-[1221px]">
         <div className="container  h-[676px] overflow-hidden relative ml:w-[375px] ml:h-[1221px]">
           <div className="w-[1000px] h-[1000px] ml:w-[708px] ml:h-[708px]  border-2 rounded-[50%] flex justify-center items-center absolute left-[10%] top-[-24%] ml:top-[20%] ml:left-[-45%]">
             <div className="w-[765px] h-[765px] ml:w-[541px] ml:h-[541px] border-2 rounded-[50%]  flex justify-center items-center">

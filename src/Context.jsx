@@ -177,7 +177,7 @@ const AppProvider = ({ children }) => {
       price: "$ 23,58",
     },
   ];
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const click = () => {
     setOpen(!open);
   };
