@@ -21,18 +21,18 @@ export default function BestSellex() {
     <>
       <div className="w-full h-[796px]  flex justify-center items-center ml:w-[375px] ml:h-[1400px]">
         <div className="container  h-[796px] ml:w-[375px] ml:h-[1269px]">
-          <div className="flex justify-between items-center mt-[160px] ml:mt-[40px]">
-            <h1 className="text-[60px] font-semibold ml:text-[40px]">
+          <div className="flex justify-between items-center mt-[160px] ml:mt-[40px] ma:mt-[80px] mr:mt-[80px]">
+            <h1 className="text-[60px] font-semibold ml:text-[40px]  ma:text-[40px]">
               Best seller products
             </h1>
-            <div className="text-[44px] ml:flex ml:gap-[16px] ml:pt-[60px]">
+            <div className="text-[44px] ml:flex ml:gap-[16px] ml:pt-[60px] ma:flex ma:pt-[60px] ">
               <i
                 onClick={handlePrev}
-                className="fa-solid fa-arrow-left mr-[16px] ml:text-[24px] ml:mr-[0px]"
+                className="fa-solid fa-arrow-left mr-[16px] ml:text-[24px] ml:mr-[0px] ma:text-[24px]"
               ></i>
               <i
                 onClick={handleNext}
-                className="fa-solid fa-arrow-right ml:text-[24px]"
+                className="fa-solid fa-arrow-right ml:text-[24px] ma:text-[24px]"
               ></i>
             </div>
           </div>
@@ -55,6 +55,18 @@ export default function BestSellex() {
                   slidesPerView: 5.2,
                   spaceBetween: 30,
                 },
+                425: {
+                  slidesPerView: 2.1,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 2.95,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 5.2,
+                  spaceBetween: 30,
+                },
               }}
               pagination={{
                 type: "fraction",
@@ -69,9 +81,15 @@ export default function BestSellex() {
               {products.length ? (
                 products.map((item, idx) => (
                   <SwiperSlide key={idx}>
-                    <div key={idx} className=" ml:mb-[24px]">
+                    <div key={idx} className=" ml:mb-[24px] ma:mb-[24px] mr:mb-[24px] ">
                       <img
-                        className="min-w-[250px] h-[250px] ml:min-w-[150px] ml:h-[210px] rounded-[8px] mr-[24px]"
+                        className="
+                        min-w-[250px] h-[250px]
+                        ml:min-w-[150px] ml:h-[210px]
+                        ma:min-w-[150px] ma:h-[210px]
+                        mr:min-w-[200px] mr:h-[240px]
+                        my:min-w-[150px] my:h-[210px]
+                        rounded-[8px] mr-[24px]"
                         src={item.img}
                         alt=""
                       />

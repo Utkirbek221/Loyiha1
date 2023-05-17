@@ -94,14 +94,15 @@ header {
    
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (min-width: 376px) {
   header {
     /* background-image: none; */
-    background-image: url(./components/img/bgimgmin.svg);
+    background-image: url(./components/img/img.png);
     width: 100%;
     height: 600px;
     background-position: bottom;
     background-repeat: no-repeat;
+   background-size:inherit;
   }
   .bgimg{
     width: 100%;
@@ -109,6 +110,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(./components/img/bgimgmiin.svg);
+    
    }
 
 
