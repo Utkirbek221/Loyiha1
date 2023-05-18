@@ -45,7 +45,7 @@
 }
 
 .active:before {
-  content: "+";
+  content: "✔";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,8 +109,8 @@ header {
     height: 835px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(./components/img/bgimgmiin.svg);
-    
+    background-image: url(./components/img/bgimg.svg);
+    background-size: cover;
    }
 
 

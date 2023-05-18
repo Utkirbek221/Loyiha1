@@ -2,13 +2,13 @@ import React from "react";
 import SS from "./SS";
 import { useGlobalContext } from "../../Context";
 
-export default function Newcomer() {
+export default function ёNewcomer() {
   const {style, activeButton, handleClick} = useGlobalContext()
   
   return (
     <>
       <div
-        className="bgimg ml:pl-[15px]"
+        className="bgimg ml:pl-[15px]   mp:w-[320px] "
       >
         <div className="container">
           <h4 className="text-[#F17252] pt-[141px] text-[20px] font-semibold ml:pt-[71px]">
@@ -32,7 +32,7 @@ export default function Newcomer() {
           >
             2 seater Sofa
           </h1>
-          <p className="text-[18px] font-normal opacity-50 w-[645px] ml:h-[104px] ml:w-[324px] ml:mb-[29px]">
+          <p className="text-[18px] font-normal opacity-50 w-[645px] ml:h-[104px] ml:w-[324px] ml:mb-[29px] mp:w-[292px] ma:w-[390px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
             luctus malesuada et volutpat, pellentesque dignissim suscipit.{" "}
           </p>

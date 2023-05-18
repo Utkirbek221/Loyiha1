@@ -12,9 +12,9 @@ export default function Section() {
       {/* <Provide /> */}
       {/* <BestSeller /> */}
       {/* <OurLatest /> */}
-      <Newcomer />
+      {/* <Newcomer /> */}
       {/* <ClientsSay/> */}
-      {/* <PayDetails/> */}
+      <PayDetails/>
     </section>
   );
 }

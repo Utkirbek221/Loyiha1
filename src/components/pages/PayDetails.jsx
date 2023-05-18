@@ -5,7 +5,7 @@ import burchak2 from "../img/burchak2.svg";
 export default function PayDetails() {
   return (
     <>
-      <div className="w-full h-[806px] relative overflow-y-hidden bg-[#F5F6F8] ml:w-[375px] ml:h-[886px] ">
+      <div className="w-full h-[806px] relative overflow-y-hidden bg-[#F5F6F8] ml:w-[375px] ml:h-[886px] ma:w-[425px] ma:h-[940px]">
         <div className="container relative">
           <div className=" w-[1000px] h-[1000px] ml:w-[0px] ml:h-[0px] border-2 rounded-[50%]  flex justify-center items-center absolute top-[48%] right-[67%]">
             <div className="w-[765px] h-[765px] ml:w-[0px] ml:h-[0px] border-2 rounded-[50%]  flex justify-center items-center">
@@ -15,10 +15,10 @@ export default function PayDetails() {
             </div>
           </div>
           <div className="container relative">
-            <h1 className=" pt-[142px] text-[60px] font-semibold w-[530px] ml:pt-[83px] ml:text-[32px] ml:w-[320px]">
+            <h1 className=" pt-[142px] text-[60px] font-semibold w-[530px] ml:pt-[83px] ml:text-[32px] ml:w-[320px] ma:text-[32px] ma:w-[320px] ma:pt-[83px]">
               We pay details in every our work
             </h1>
-            <p className="text-[#0F3141] text-[20px] font-normal w-[740px] pt-[44px] pb-[98px] ml:pt-[24px] ml:pb-[42px] ml:w-[310px] ml:text-[18px]">
+            <p className="text-[#0F3141] text-[20px] font-normal w-[740px] pt-[44px] pb-[98px] ml:pt-[24px] ml:pb-[42px] ml:w-[310px] ml:text-[18px] ma:pt-[24px] ma:pb-[42px] ma:w-[355px] ma:text-[18px]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit
               et nisl tristique nulla. Nisl, egestas molestie vestibulum lectus
               habitasse donec morbi. At est parturient id eu ut.{" "}
@@ -30,10 +30,10 @@ export default function PayDetails() {
               <p className="text-[20px] font-normal underline ml:text-[18px] ">View Projects</p>
             </div>
           </div>
-          <div className="relative w-full h-full  mt-[-608px]  ml:mt-[41px]">
-            <img className="absolute  right-[0px] ml:left-[47%] ml:w-[168px] ml:h-[297px]" src={burchak} alt="" />
+          <div className="relative w-full h-full  mt-[-608px]  ml:mt-[41px] ma:mt-[41px] ma:w-[425px]">
+            <img className="absolute  right-[0px] ml:left-[47%] ml:w-[168px] ml:h-[297px] ma:left-[40%] ma:w-[250px] ma:h-[370px]" src={burchak} alt="" />
             <img
-              className="absolute right-[12%] top-[350px] ml:w-[265px] ml:h-[165px] ml:top-[130px] ml:right-[70px]"
+              className="absolute right-[12%] top-[350px] ml:w-[265px] ml:h-[165px] ml:top-[130px] ml:right-[70px] ma:w-[280px] ma:h-[400px] ma:top-[74px] ma:right-[120px]"
               src={burchak2}
               alt=""
             />
