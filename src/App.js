@@ -6,10 +6,9 @@ import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Section />
-      {/* <Footer /> */}
-      
+      <Footer />
     </>
   );
 }
