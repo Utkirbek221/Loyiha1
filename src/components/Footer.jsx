@@ -9,7 +9,7 @@ import { TfiFacebook } from "react-icons/tfi";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F3141] w-full h-[612px] m-auto text-[#fff] ml:w-[375px] ml:h-[501px] ma:w-[425px] ma:h-[512px] mr:w-[768px]">
+    <footer className="bg-[#0F3141] w-full h-[612px] m-auto text-[#fff] ml:w-[375px] ml:h-[501px] ma:w-[425px] ma:h-[512px] mr:w-[768px]  mp:w-[320px]">
       <div className="container">
         <div className="flex pt-[64px]">
           <div className="">

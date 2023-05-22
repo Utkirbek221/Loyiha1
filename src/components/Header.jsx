@@ -7,7 +7,7 @@ import { useGlobalContext } from "../Context";
 export default function Header() {
   const { click, open } = useGlobalContext();
   return (
-    <header className="">
+    <header className="mp:w-[320px]">
       <div className="m-auto">
         <div className="shadov">
           <div className="container">

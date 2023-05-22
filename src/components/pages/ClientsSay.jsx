@@ -18,7 +18,7 @@ export default function ClientsSay() {
   };
   return (
     <>
-      <div className="w-full h-[970px] ml:w-[375xp] ml:h-[955px] ">
+      <div className="w-full h-[970px] ml:w-[375xp] ml:h-[955px] mp:w-[320px]">
         <div className="container my:flex my:justify-center my:items-center my:flex-col">
           <div className="flex justify-between items-center mt-[160px] mb-[67px] ml:mt-[80px] ml:mb-[40px] ma:mt-[80px] ma:mb-[40px]  my:mt-[40px] my:gap-[50px]">
             <h1 className="text-[60px] font-semibold ml:text-[40px] ma:text-[40px] my:text-[40px] mp:text-[30px]">

@@ -19,7 +19,7 @@ export default function BestSellex() {
   };
   return (
     <>
-      <div className="w-full h-[796px]  flex justify-center items-center ml:w-[375px] ml:h-[1400px]">
+      <div className="w-full h-[796px]  flex justify-center items-center ml:w-[375px] ml:h-[1400px] mp:w-[320px]">
         <div className="container  h-[796px] ml:w-[375px] ml:h-[1269px]">
           <div className="flex justify-between items-center mt-[160px] ml:mt-[40px] ma:mt-[80px] mr:mt-[80px]">
             <h1 className="text-[60px] font-semibold ml:text-[40px]  ma:text-[40px]">
@@ -85,6 +85,7 @@ export default function BestSellex() {
                       <img
                         className="
                         min-w-[250px] h-[250px]
+                        mp:min-w-[130px] mp:h-[190px]
                         ml:min-w-[150px] ml:h-[210px]
                         ma:min-w-[150px] ma:h-[210px]
                         mr:min-w-[200px] mr:h-[240px]

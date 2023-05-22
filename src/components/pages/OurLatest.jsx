@@ -18,7 +18,7 @@ export default function OurLatest() {
     };
   return (
     <>
-      <div className="w-full h-[1063px] ml:h-[820px] bg-[#0F3141] ml:w-[375px] ma:h-[900px] ">
+      <div className="w-full h-[1063px] ml:h-[820px] bg-[#0F3141] ml:w-[375px] ma:h-[900px] mp:w-[320px]">
         <div className="container relative">
           <h1 className="text-[60px] font-semibold pt-[129px] text-[white] ml:pt-[45px] ml:text-[40px] ma:text-[50px] ma:pt-[45px] ">
             Our lates projects
@@ -93,7 +93,7 @@ export default function OurLatest() {
                       className="cursor-pointer hover:text-red-500"
                     >
                       <img
-                        className="h-[520px] min-w-[420px] rounded-[30px] mr-[40px] ml:h-[208px] ml:min-w-[160px] ml:rounded-[8px] ma:rounded-[8px] ma:h-[208px] ma:min-w-[160px] mr:h-[290px] mr:min-w-[250px] mr:rounded-[8px]"
+                        className="h-[520px] min-w-[420px] rounded-[30px] mr-[40px] ml:h-[208px] ml:min-w-[160px] ml:rounded-[8px] ma:rounded-[8px] ma:h-[208px] ma:min-w-[160px] mr:h-[290px] mr:min-w-[250px] mr:rounded-[8px] mp:h-[190px] mp:min-w-[140px]"
                         src={lates.img}
                         alt=""
                       />
